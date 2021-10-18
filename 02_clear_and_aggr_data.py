@@ -19,10 +19,9 @@ with open(v_pass, 'r', encoding='utf-8-sig') as fp:
 
 l_user = user
 l_pass = password
-l_tns = ora.makedsn('13.95.167.129', 1521, service_name = 'pdb1')
+l_tns = ora.makedsn('192.168.1.166', 1521, service_name = 'xe')
 
 l_conn_ora = ora.connect(l_user, l_pass, l_tns)
-print()
 print ("Oracle DB version: " + l_conn_ora.version)
 print ("Oracle client encoding: " + l_conn_ora.encoding)
 #print(l_conn_ora)
@@ -46,15 +45,15 @@ print('done!')
 print()
 
 print('________Загрузка агрегированной информации________')
-print('---> Загрузка данных в таблицу t_arrg_w')
+print('---> Загрузка данных в таблицу t_aggr_w')
 l_cursor.execute('BEGIN pkg_fob.make_aggr_w; END;')
 print('done!')
 
-print('---> Загрузка данных в таблицу t_arrg_s')
+print('---> Загрузка данных в таблицу t_aggr_s')
 l_cursor.execute('BEGIN pkg_fob.make_aggr_s; END;')
 print('done!')
 
-print('---> Загрузка данных в таблицу t_arrg_dict')
+print('---> Загрузка данных в таблицу t_aggr_dict')
 l_cursor.execute('BEGIN pkg_fob.make_aggr_dict; END;')
 print('done!')
 

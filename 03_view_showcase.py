@@ -27,13 +27,14 @@ with open(v_pass, 'r', encoding='utf-8-sig') as fp:
 
 l_user = user
 l_pass = password
-l_tns = ora.makedsn('13.95.167.129', 1521, service_name = 'pdb1')
+l_tns = ora.makedsn('192.168.1.166', 1521, service_name = 'xe')
 
 l_conn_ora = ora.connect(l_user, l_pass, l_tns)
 print ("Oracle DB version: " + l_conn_ora.version)
 print ("Oracle client encoding: " + l_conn_ora.encoding)
 #print(l_conn_ora)
 l_cursor = l_conn_ora.cursor()
+print()
 
 #####
 l_summer = l_cursor.execute(" select * from t_aggr_s ")

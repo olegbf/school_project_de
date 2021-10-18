@@ -12,22 +12,22 @@ Created on Thu Apr 22 22:32:00 2021
 
 import cx_Oracle as ora
 import csv
-from kaggle.api.kaggle_api_extended import KaggleApi
+#from kaggle.api.kaggle_api_extended import KaggleApi
 
-# Загрузка файлов датасета с сайта Kaggle.com
-api = KaggleApi()
-api.authenticate()
+## Загрузка файлов датасета с сайта Kaggle.com
+#api = KaggleApi()
+#api.authenticate()
 
-p ='/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/'
+#p ='/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/'
 
-# Download all files of a dataset
-# Signature: dataset_download_files\
-#    (dataset, path=None, force=False, quiet=True, unzip=False)
-api.dataset_download_files('the-guardian/olympic-games', path = p, unzip = True)
-print()
-print('Файлы датасета загружены!')
-print()
-# Конец загрузки файлов датасета
+## Download all files of a dataset
+## Signature: dataset_download_files\
+##    (dataset, path=None, force=False, quiet=True, unzip=False)
+#api.dataset_download_files('the-guardian/olympic-games', path = p, unzip = True)
+#print()
+#print('Файлы датасета загружены!')
+#print()
+## Конец загрузки файлов датасета
 
 v_usr = '/mnt/hd0/yd/PROG/Learn/Learn_DE/user.txt'
 v_pass = '/mnt/hd0/yd/PROG/Learn/Learn_DE/password.txt'
@@ -41,7 +41,7 @@ with open(v_pass, 'r', encoding='utf-8-sig') as fp:
 
 l_user = user
 l_pass = password
-l_tns = ora.makedsn('13.95.167.129', 1521, service_name = 'pdb1')
+l_tns = ora.makedsn('192.168.1.166', 1521, service_name = 'xe')
 
 l_conn_ora = ora.connect(l_user, l_pass, l_tns)
 print ("Oracle DB version: " + l_conn_ora.version)
@@ -51,11 +51,11 @@ l_cursor = l_conn_ora.cursor()
 print()
 
 # Переменные для расположения файлов датасета
-r1_dict = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/dictionary.csv'
-r2_winter = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/winter.csv'
-r3_summer = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/summer.csv'
+r1_dict = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/dictionary.csv'
+r2_winter = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/winter.csv'
+r3_summer = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/summer.csv'
 
-l_cursor.execute('BEGIN pkg_fob.clear_tables_csv; END;')
+#l_cursor.execute('BEGIN pkg_fob.clear_tables_csv; END;')
 
 print('Импорт данных из файлов в таблицы Oracle:')
 #
