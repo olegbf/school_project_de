@@ -36,7 +36,6 @@ create table t_winter (
     year    number(4)
 )
 /
-
 create table t_summer (
     country varchar2(30),
     athlete varchar2(128),
@@ -44,7 +43,6 @@ create table t_summer (
     year    number(4)
 )
 /
-
 create table t_dict (
     country    varchar2(100),
     code       varchar2(10),
@@ -52,28 +50,21 @@ create table t_dict (
     vvp        number(8, 2)
 )
 /
-
 create table t_aggr_w (
     country varchar2(30),
     medal   number(4)
 )
 /
-
 create table t_aggr_s (
     country varchar2(30),
     medal   number(4)
 )
 /
-
 create table t_aggr_dict (
     country varchar2(100),
     vvp     number(8, 2)
 )
 /
-
-
-
-
 
 
 
