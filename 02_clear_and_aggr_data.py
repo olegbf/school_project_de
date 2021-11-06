@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 12 14:31:51 2021
-
-@author: f0b
-"""
 import cx_Oracle as ora
 
 v_usr = '/mnt/hd0/yd/PROG/Learn/Learn_DE/user.txt'

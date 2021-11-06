@@ -49,19 +49,19 @@ create table t_dict (
     country    varchar2(100),
     code       varchar2(10),
     population number(10),
-    vvp        varchar2(10)
+    vvp        number(8, 2)
 )
 /
 
 create table t_aggr_w (
     country varchar2(30),
-    medal   number(2)
+    medal   number(4)
 )
 /
 
 create table t_aggr_s (
     country varchar2(30),
-    medal   number(2)
+    medal   number(4)
 )
 /
 

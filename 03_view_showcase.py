@@ -1,14 +1,7 @@
-# Cкрипт выводит агреггированную информацию в графическом виде             #
-#                                                                          #
-############################################################################
+### Cкрипт выводит агреггированную информацию в графическом виде             
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat May  8 09:59:19 2021
-
-@author: f0b
-"""
 
 import cx_Oracle as ora
 import matplotlib.pyplot as plt
@@ -16,7 +9,6 @@ import matplotlib.pyplot as plt
 
 v_usr = '/mnt/hd0/yd/PROG/Learn/Learn_DE/user.txt'
 v_pass = '/mnt/hd0/yd/PROG/Learn/Learn_DE/password.txt'
-
 
 # Подключение к Oracle
 with open(v_usr, 'r', encoding='utf-8-sig') as fp:
