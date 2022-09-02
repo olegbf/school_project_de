@@ -46,8 +46,6 @@ r1_dict = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/dictionary.c
 r2_winter = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/winter.csv'
 r3_summer = '/mnt/hd0/yd/PROG/Learn/Learn_DE/projects/my_proj_de2/CSV/summer.csv'
 
-#l_cursor.execute('BEGIN pkg_fob.clear_tables_csv; END;')
-
 print('Импорт данных из файлов в таблицы Oracle:')
 #
 # Вставка из csv в olymp_dict
