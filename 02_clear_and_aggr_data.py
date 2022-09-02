@@ -1,3 +1,6 @@
+### Скрипт очищает данные и загружает 
+### их в агрегированные таблицы.
+
 import cx_Oracle as ora
 
 v_usr = '/mnt/hd0/yd/PROG/Learn/Learn_DE/user.txt'
