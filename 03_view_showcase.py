@@ -1,7 +1,4 @@
-### Cкрипт выводит агреггированную информацию в графическом виде             
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+### Cкрипт выводит агрегированную информацию в графическом виде             
 
 import cx_Oracle as ora
 import matplotlib.pyplot as plt
