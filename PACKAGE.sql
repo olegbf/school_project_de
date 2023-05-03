@@ -59,7 +59,7 @@ PROCEDURE make_dict
                ,code
                ,population
                ,vvp
-        from olymp_dict;
+          from olymp_dict;
     commit;
     
     end make_dict; 
@@ -101,12 +101,12 @@ PROCEDURE make_aggr_dict
     begin
          execute immediate 'truncate table t_aggr_dict drop storage';
          insert into t_aggr_dict(country, vvp)
-         select   code
-                  ,vvp                 
-           from   t_dict
-          where   vvp >= 5000
-            and   population > 50000000
-         order by vvp desc;
+         select code
+                ,vvp                 
+           from t_dict
+          where vvp >= 5000
+            and population > 50000000
+          order by vvp desc;
     commit;
     
     end make_aggr_dict;
